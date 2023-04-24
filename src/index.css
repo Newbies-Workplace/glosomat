@@ -6,12 +6,14 @@
 
     color: rgba(255, 255, 255, 0.87);
     background-color: #c2c2c2;
-
+/*
     font-synthesis: none;
     text-rendering: optimizeLegibility;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
     -webkit-text-size-adjust: 100%;
+
+ */
 }
 
 a {
@@ -95,7 +97,7 @@ button2{
 
     position: relative;
 
-    top: 573px;
+    top: 400px;
     bottom: 360px;
 
     margin-left: auto;
@@ -104,17 +106,11 @@ button2{
     width: 578px;
     height: 91px;
 
-    flex: none;
+  /*  flex: none;
     order: 0;
     flex-grow: 0;
-
+*/
     box-sizing: border-box;
-
-
-
-    left: 0;
-    right: 0;
-
 
     background: #D9D9D9;
     border: 2px solid #000000;
@@ -123,7 +119,7 @@ button2{
 
 h3{
     position: absolute;
-    left: 0;
+    left: 16%;
     right: 0;
     top: 0;
     bottom: 6.85%;
@@ -140,17 +136,65 @@ h3{
 
     color: #000000;
 
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
+
+.green-rectangle{
+    position: absolute;
+    width: 100%;
+    height: 122px;
+    left: 0;
+    top: 0;
+
+    background: #51B974;
+}
+
+img {
+    height: 50px;
+    margin-right: 10px;
+}
+
+h4{
+    position: absolute;
+    left: 7.29%;
+    right: 76.11%;
+    top: 16.39%;
+    bottom: 20.49%;
+
+
+
+    font-family: 'Pompiere';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 0px;
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+
+    color: #FFFFFF;
+}
+
+
+
+
 
 
 button:hover {
     border-color: #a5ffe6;
 }
+button2:hover {
+    border-color: #a5ffe6;
+}
+
+/*
 button:focus,
 button:focus-visible {
     outline: 4px auto -webkit-focus-ring-color;
 }
+
+ */
 
 @media (prefers-color-scheme: light) {
     :root {
@@ -160,7 +204,7 @@ button:focus-visible {
     a:hover {
         color: #747bff;
     }
-    button {
+    button2 {
         background-color: #f9f9f9;
     }
 }
