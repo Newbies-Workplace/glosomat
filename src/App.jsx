@@ -1,25 +1,22 @@
-
 import './App.css'
-import NewVote from "./buttons/Nowe głosowanie.jsx";
-import YourVote from "./buttons/Twoje głosowanie.jsx";
+import NewVote from "./NewVote/NewVote.jsx";
+import YourVote from "./YourVote/YourVote.jsx";
 import Glosomat from "./texts/Glosomat.jsx";
-
-
+import greenRectangle from "./look/greenRectangle.jsx";
 function App() {
     return(
         <div>
-            <NewVote></NewVote>
+            <div className="green-rectangle">
+                <Glosomat></Glosomat>
+            </div>
 
-            <YourVote></YourVote>
-            <YourVote></YourVote>
-            <YourVote></YourVote>
+            <NewVote/>
 
-            <div className="green-rectangle"></div>
-            <Glosomat></Glosomat>
+            <YourVote/>
+            <YourVote/>
+            <YourVote/>
         </div>
     )
 }
-
-
 export default App
 
