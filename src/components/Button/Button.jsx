@@ -1,13 +1,13 @@
 import React from "react";
 import cs from 'classnames';
-import styles from '../Button/Button.module.css'
+import styles from './Button.module.css'
 
 
 
 //class ButtonProps {
 //}
 
-const NewVote = (
+const Button = (
     {
         children,
         className,
@@ -27,4 +27,4 @@ const NewVote = (
 }
 
 
-export default NewVote;
+export default Button;

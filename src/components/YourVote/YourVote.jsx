@@ -1,9 +1,9 @@
 import React from "react";
 const YourVote = () =>(
-    <button2>
+    <button>
         <h3>
             Twoje głosowanie
         </h3>
-    </button2>
+    </button>
 )
 export default YourVote;

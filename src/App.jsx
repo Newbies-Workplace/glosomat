@@ -1,20 +1,24 @@
-import './App.css'
-import NewVote from "./NewVote/NewVote.jsx";
-import YourVote from "./YourVote/YourVote.jsx";
-import Glosomat from "./texts/Glosomat.jsx";
-import greenRectangle from "./look/greenRectangle.jsx";
+import styles from './App.module.css'
+import Button from "./components/Button/Button.jsx";
+import YourVote from "./components/YourVote/YourVote.jsx";
+import Toolbar from "./components/Toolbar/Toolbar.jsx";
 function App() {
     return(
-        <div>
-            <div className="green-rectangle">
-                <Glosomat></Glosomat>
+        <div className={styles.container}>
+            <Toolbar/>
+            <div className={styles.wrapper}>
+                <div className={styles.content}>
+                    <Button>Nowe głosowanie</Button>
+                    <div className={styles.votes}>
+                        <YourVote/>
+                        <YourVote/>
+                        <YourVote/>
+                    </div>
+
+                </div>
             </div>
 
-            <NewVote/>
 
-            <YourVote/>
-            <YourVote/>
-            <YourVote/>
         </div>
     )
 }

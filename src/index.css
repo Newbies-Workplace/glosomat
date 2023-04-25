@@ -1,13 +1,13 @@
 @import url('https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap');
 
 :root {
+    width: 100vw;
+    height: 100vh;
     font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
     line-height: 1.5;
     font-weight: 400;
 
-
-    color: rgba(255, 255, 255, 0.87);
-    background-color: #c2c2c2;
+    background-color: #ffffff;
     /*
         font-synthesis: none;
         text-rendering: optimizeLegibility;
@@ -18,21 +18,12 @@
      */
 }
 
-a {
-    font-weight: 500;
-    color: #646cff;
-    text-decoration: inherit;
-}
-a:hover {
-    color: #535bf2;
-}
-
 body {
     margin: 0;
-    display: flex;
 
-    min-width: 0;
-    min-height: 100vh;
+    width: 100vw;
+    height: 100vh;
+
 }
 
 h1 {
@@ -41,11 +32,6 @@ h1 {
 }
 
 h2  {
-    position: absolute;
-    left: 21.76%;
-    right: 21.92%;
-    top: 0;
-    bottom: 7.51%;
 
     font-family: 'Cherry Swash', cursive;
     font-style: normal;
@@ -64,11 +50,6 @@ h2  {
 }
 
 h3{
-    position: absolute;
-    left: 16%;
-    right: 0;
-    top: 0;
-    bottom: 6.85%;
 
     font-family: 'Cherry Swash', cursive;
     font-style: normal;
@@ -85,29 +66,7 @@ h3{
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 
-.green-rectangle{
-    position: absolute;
-    width: 100%;
-    height: 122px;
-    left: 0;
-    top: 0;
-
-    background: #51B974;
-}
-
-img {
-    height: 50px;
-    margin-right: 10px;
-}
-
 h4{
-    position: absolute;
-    left: 7.29%;
-    right: 76.11%;
-    top: 16.39%;
-    bottom: 20.49%;
-
-
 
     font-family: 'Pompiere';
     font-style: normal;
@@ -120,32 +79,4 @@ h4{
     text-align: center;
 
     color: #FFFFFF;
-}
-
-button:hover {
-    border-color: #a5ffe6;
-}
-button2:hover {
-    border-color: #a5ffe6;
-}
-
-/*
-button:focus,
-button:focus-visible {
-    outline: 4px auto -webkit-focus-ring-color;
-}
-
- */
-
-@media (prefers-color-scheme: light) {
-    :root {
-        color: #213547;
-        background-color: #ffffff;
-    }
-    a:hover {
-        color: #747bff;
-    }
-    button2 {
-        background-color: #f9f9f9;
-    }
 }
