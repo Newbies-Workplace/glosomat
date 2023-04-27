@@ -1,6 +1,5 @@
 import styles from './App.module.css'
 import Button from "./components/Button/Button.jsx";
-import YourVote from "./components/YourVote/YourVote.jsx";
 import Toolbar from "./components/Toolbar/Toolbar.jsx";
 function App() {
     return(
@@ -8,17 +7,14 @@ function App() {
             <Toolbar/>
             <div className={styles.wrapper}>
                 <div className={styles.content}>
-                    <Button>Nowe głosowanie</Button>
-                    <div className={styles.votes}>
-                        <YourVote/>
-                        <YourVote/>
-                        <YourVote/>
-                    </div>
-
+                    <Button onClick={()=>{console.log("Hello")}}>Nowe głosowanie</Button>
+                </div>
+                <div className={styles.yourvote}>
+                    <Button variant="secondary" onClick={() =>{console.log("elo")}}>Twoje głosowanie</Button>
+                    <Button variant="secondary" onClick={() =>{console.log("elo")}}>Twoje głosowanie</Button>
+                    <Button variant="secondary" onClick={() =>{console.log("elo")}}>Twoje głosowanie</Button>
                 </div>
             </div>
-
-
         </div>
     )
 }

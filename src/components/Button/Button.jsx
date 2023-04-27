@@ -1,30 +1,28 @@
 import React from "react";
 import cs from 'classnames';
 import styles from './Button.module.css'
-
-
-
-//class ButtonProps {
-//}
-
 const Button = (
     {
         children,
         className,
         type = 'button',
+        onClick,
+        variant = 'primary',
     }
 ) =>{
+    const buttonClasses = cs(styles.button, {
+        [styles.buttonYourv]: variant === 'secondary'
+    }, className);
     return(
         <button
             type={type}
             className={
-            cs(styles.button, className)
+            buttonClasses}
+            style={{ fontFamily: 'Cherry Swash' }
         }
-        onClick={onclick}>
+        onClick={onClick}>
             {children}
         </button>
     )
 }
-
-
 export default Button;
