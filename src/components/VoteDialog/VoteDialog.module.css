@@ -1,0 +1,116 @@
+.dialogContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 100px;
+
+}
+.squareContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+.greenSquare{
+    display: flex;
+    width: 847px;
+    height: 761px;
+
+    background: #51B974;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+}
+
+.whiteSquare{
+    display: block;
+    position: absolute;
+    height: 634.1666259765625px;
+    width: 818.7667236328125px;
+    border-radius: 7px;
+    top: 114.1500244140625px;
+    background-color: white;
+}
+
+.textNewVoteContainer{
+    display: block;
+    position: absolute;
+    top: 10px;
+}
+.textnewvote{
+    font-family: 'Cherry Swash', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 80px;
+    letter-spacing: 0.07em;
+    color: #000000;
+    mix-blend-mode: normal;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.inputContainer{
+    display: flex;
+    position: absolute;
+    height: 86px;
+    width: 397px;
+    left: 211px;
+    top: 107px;
+    border-radius: 0px;
+}
+
+.inputStyle{
+    position: absolute;
+    left: 0%;
+    right: 0%;
+    top: 0%;
+    bottom: 0%;
+
+    background: #eeeeee;
+    border-radius: 23px;
+}
+.textfromtoContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    top: 243px;
+}
+.text{
+    font-family: 'Cherry Swash', cursive;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 80px;
+    letter-spacing: 0.07em;
+    color: #000000;
+    mix-blend-mode: normal;
+    text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
+}
+
+.bottomContainer{
+    display: flex;
+    position: relative;
+    flex-direction: row;
+    top: 310px;
+    left: 65px;
+}
+.fromContainer{
+    display: flex;
+    position: relative;
+    margin-left: 17px;
+    margin-right: 20px;
+    width: 221px;
+}
+.toContainer{
+    display: flex;
+    position: relative;
+    margin-left: 17px;
+    width: 221px;
+}
+
+
+
+
+
+
