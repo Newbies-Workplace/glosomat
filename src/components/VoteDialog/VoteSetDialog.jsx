@@ -1,14 +1,10 @@
 import React from "react";
-import styles from "./VoteDialog.module.css"
+import styles from "./Dialog.module.css"
 
 export function VoteSetDialog(){
     return(
-        <div className={styles.squareContainer}>
-            <div className={styles.textNewVoteContainer}>
-                <div className={styles.textnewvote}>Nowe Głosowanie</div>
-            </div>
-            <div className={styles.greenSquare}>
-                <div className={styles.whiteSquare}>
+
+                <div>
 
                     <div className={styles.inputContainer}>
                         <input type={"text"} id={"textplace"} name={"textplace"}  className={styles.inputStyle}>
@@ -33,9 +29,7 @@ export function VoteSetDialog(){
                         </div>
 
                     </div>
-
                 </div>
-            </div>
-        </div>
+
     )
 }

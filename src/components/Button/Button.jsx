@@ -3,7 +3,7 @@ import cs from 'classnames';
 import styles from './Button.module.css'
 import { Link } from 'react-router-dom';
 import ReactModal from "react-modal";
-import VoteDialog from "../VoteDialog/VoteDialog.jsx";
+import VoteDialog from "../VoteDialog/Dialog.jsx";
 const Button = (
     {
         children,

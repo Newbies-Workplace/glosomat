@@ -1,8 +1,19 @@
+.backdrop {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
 .dialogContainer{
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 100px;
+    flex-direction: column;
+
+    padding: 20px;
+
+    background: #51B974;
 
 }
 .squareContainer{
@@ -24,19 +35,12 @@
 
 .whiteSquare{
     display: block;
-    position: absolute;
     height: 634.1666259765625px;
     width: 818.7667236328125px;
     border-radius: 7px;
-    top: 114.1500244140625px;
     background-color: white;
 }
 
-.textNewVoteContainer{
-    display: block;
-    position: absolute;
-    top: 10px;
-}
 .textnewvote{
     font-family: 'Cherry Swash', cursive;
     font-style: normal;
@@ -51,20 +55,12 @@
 
 .inputContainer{
     display: flex;
-    position: absolute;
     height: 86px;
     width: 397px;
-    left: 211px;
-    top: 107px;
-    border-radius: 0px;
 }
 
 .inputStyle{
-    position: absolute;
-    left: 0%;
-    right: 0%;
-    top: 0%;
-    bottom: 0%;
+
 
     background: #eeeeee;
     border-radius: 23px;

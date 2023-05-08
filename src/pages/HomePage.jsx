@@ -3,8 +3,8 @@ import styles from "../App.module.css";
 import Toolbar from "../components/Toolbar/Toolbar.jsx";
 import Button from "../components/Button/Button.jsx";
 import {useNavigate} from "react-router-dom";
-import VoteDialog from "../components/VoteDialog/VoteDialog.jsx";
-import ReactModal from "react-modal";
+import VoteDialog from "../components/VoteDialog/Dialog.jsx";
+import {VoteSetDialog} from "../components/VoteDialog/VoteSetDialog.jsx";
 
 export function HomePage() {
     const navigate = useNavigate();
@@ -12,15 +12,14 @@ export function HomePage() {
     const handleClick = () => {
         setIsOpen(true);
     }
-    return (
-        <div className={styles.container}>
+    return (<div className={styles.container}>
 
             <Toolbar/>
             <div className={styles.wrapper}>
                 <div className={styles.content}>
-                        <Button onClick={() => {
-                            handleClick()
-                        }}>Nowe głosowanie</Button>
+                    <Button onClick={() => {
+                        handleClick()
+                    }}>Nowe głosowanie</Button>
                     <div className={styles.yourvote}>
                         <Button variant="secondary" onClick={() => {
                             console.log("elo")
@@ -35,14 +34,13 @@ export function HomePage() {
                     </div>
                 </div>
             </div>
-            <ReactModal
+            <VoteDialog
+                title={"Nowe głosowanie"}
                 isOpen={isOpen}
-                onRequestClose={() => setIsOpen(false)}
-                contentLabel="Dialog Window"
-                className="ReactModal__Content"
+                onDismiss={() => setIsOpen(false)}
             >
-                    <VoteDialog></VoteDialog>
-            </ReactModal>
+                <VoteSetDialog/>
+            </VoteDialog>
         </div>
 
     )
