@@ -1,11 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Cherry+Swash&display=swap');
+
+* {
+    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+    /*outline: #000000 solid 2px;*/
+}
+
 :root {
     width: 100vw;
     height: 100vh;
-    font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+
     line-height: 1.5;
     font-weight: 400;
     background-color: #ffffff;
+}
+input{
+    font-size: 30px;
+    font-family: Lato;
+    font-style: italic;
+}
+input::placeholder{
+    font-size: 20px;
+
 }
 body {
     margin: 0;
@@ -13,14 +28,14 @@ body {
     height: 100vh;
 }
 h1 {
-    font-size: 5.2em;
+    font-size: 32px;
     line-height: 100px;
 }
 h2  {
     font-family: 'Cherry Swash', cursive;
     font-style: normal;
     font-weight: 400;
-    font-size: 60px;
+    font-size: 32px;
     line-height: 80px;
     display: flex;
     align-items: center;
@@ -34,7 +49,7 @@ h3{
     font-family: 'Cherry Swash', cursive;
     font-style: normal;
     font-weight: 400;
-    font-size: 47px;
+    font-size: 32px;
     line-height: 62px;
     display: flex;
     align-items: center;
@@ -47,7 +62,7 @@ h4{
     font-family: 'Pompiere';
     font-style: normal;
     font-weight: 400;
-    font-size: 64px;
+    font-size: 48px;
     line-height: 0;
     display: flex;
     align-items: center;

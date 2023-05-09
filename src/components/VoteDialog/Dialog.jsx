@@ -14,6 +14,7 @@ import ReactModal from 'react-modal';
                 <div className={styles.textnewvote}>{title}</div>
 
                 <div className={styles.whiteSquare}>
+
                     {children}
                 </div>
             </div>
