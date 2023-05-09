@@ -1,22 +1,19 @@
-import styles from './App.module.css'
-import Button from "./components/Button/Button.jsx";
-import Toolbar from "./components/Toolbar/Toolbar.jsx";
+import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
+import {HomePage} from "./pages/HomePage.jsx";
+import {VotePage} from "./pages/VotePage.jsx";
+
+
+import './App.module.css'
 function App() {
     return(
-        <div className={styles.container}>
-            <Toolbar/>
-            <div className={styles.wrapper}>
-                <div className={styles.content}>
-                    <Button onClick={()=>{console.log("Hello")}}>Nowe głosowanie</Button>
-                </div>
-                <div className={styles.yourvote}>
-                    <Button variant="secondary" onClick={() =>{console.log("elo")}}>Twoje głosowanie</Button>
-                    <Button variant="secondary" onClick={() =>{console.log("elo")}}>Twoje głosowanie</Button>
-                    <Button variant="secondary" onClick={() =>{console.log("elo")}}>Twoje głosowanie</Button>
-                </div>
-            </div>
-        </div>
-    )
-}
-export default App
+        <Router>
+            <Routes>
+                <Route path={'/'} element={<HomePage/>}/>
+                <Route path={'/vote/:id'} element={<VotePage/>}/>
+            </Routes>
+        </Router>
+        )
 
+}
+
+export default App

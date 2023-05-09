@@ -13,7 +13,7 @@
     flex-grow: 0;
     width: 625px;
     height: 173px;
-    font-size: 60px;
+    font-size: 48px;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
 /*twój vote*/
@@ -25,6 +25,6 @@
     gap: 16px;
     max-height: 90px;
     max-width: 550px;
-    font-size: 47px;
+    font-size: 32px;
     text-shadow: 0 4px 4px rgba(0, 0, 0, 0.25);
 }
