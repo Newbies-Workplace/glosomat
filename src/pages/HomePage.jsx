@@ -1,5 +1,5 @@
 import React, {useState} from "react";
-import styles from "../App.module.css";
+import styles from "./HomePage.module.css";
 import Toolbar from "../components/Toolbar/Toolbar.jsx";
 import Button from "../components/Button/Button.jsx";
 import {useNavigate} from "react-router-dom";
@@ -12,8 +12,8 @@ export function HomePage() {
     const handleClick = () => {
         setIsOpen(true);
     }
-    return (<div className={styles.container}>
 
+    return (<div className={styles.container}>
             <Toolbar/>
             <div className={styles.wrapper}>
                 <div className={styles.content}>
@@ -22,14 +22,10 @@ export function HomePage() {
                     }}>Nowe głosowanie</Button>
                     <div className={styles.yourvote}>
                         <Button variant="secondary" onClick={() => {
-                            console.log("elo")
-                            navigate('/vote/id1')
                         }}>Twoje głosowanie</Button>
                         <Button variant="secondary" onClick={() => {
-                            console.log("elo")
                         }}>Twoje głosowanie</Button>
                         <Button variant="secondary" onClick={() => {
-                            console.log("elo")
                         }}>Twoje głosowanie</Button>
                     </div>
                 </div>
@@ -40,6 +36,9 @@ export function HomePage() {
                 onDismiss={() => setIsOpen(false)}
             >
                 <VoteSetDialog/>
+                <button className={styles.createButton} onClick={() =>{
+                    navigate('vote/id1')
+                }}>Utwórz</button>
             </VoteDialog>
         </div>
 

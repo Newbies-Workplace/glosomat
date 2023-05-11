@@ -32,3 +32,7 @@
     background-color: #FFD89E;
     width: 100%;
 }
+.contentContainer{
+    align-self: center;
+    margin-left: auto;
+}
