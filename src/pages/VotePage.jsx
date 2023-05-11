@@ -39,12 +39,13 @@ export function VotePage({ children }) {
                 }}>
                     <DaySmallCard title={`Day ${i + 1}`} selected={isCardSelected}/>
                 </div>
+
             )
         }
         return cards;
     };
 
-    const { voteName } = useParams();
+    // const { voteName } = useParams();
 
     return (
         <div className={styles.wrap}>
@@ -53,16 +54,16 @@ export function VotePage({ children }) {
             </Toolbar>
 
             <div className={styles.container}>
-                <h2>{voteName}</h2>
+                <h2>Czerwiec</h2>
             </div>
             <div className={styles.namesDays}>
-                <h2>pon </h2>
-                <h2>wt </h2>
-                <h2>śr </h2>
-                <h2>czw </h2>
-                <h2>ptk </h2>
-                <h2>sob </h2>
-                <h2>niedz</h2>
+                <h2 className={styles.nameDayContent}>pon </h2>
+                <h2 className={styles.nameDayContent}>wt </h2>
+                <h2 className={styles.nameDayContent}>śr </h2>
+                <h2 className={styles.nameDayContent}>czw </h2>
+                <h2 className={styles.nameDayContent}>pt </h2>
+                <h2 className={styles.nameDayContent}>sob </h2>
+                <h2 className={styles.nameDayContent}>niedz</h2>
             </div>
             <div className={styles.cardsContainer}>{generateDateCards(0)}</div>
         </div>

@@ -29,6 +29,13 @@
 }
 .namesDays{
     display: flex;
-    width: 500px;
+    align-self: center;
+    justify-content: center;
+    gap: 40px;
     height: 100px;
+}
+.nameDayContent{
+    display: flex;
+    justify-content: center;
+    width: 140px;
 }
