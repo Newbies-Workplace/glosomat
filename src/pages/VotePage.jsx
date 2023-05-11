@@ -3,58 +3,88 @@ import Toolbar from "../components/Toolbar/Toolbar.jsx";
 import styles from './VotePage.module.css';
 import { DaySmallCard } from '../components/DaySmallCard/DaySmallCard.jsx';
 import { useParams } from "react-router-dom";
+import localeData from "dayjs/plugin/localeData";
 import dayjs from "dayjs";
+import "dayjs/locale/pl";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowLeft } from "@fortawesome/free-solid-svg-icons";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
-export function VotePage({ children }) {
-    const [selectedCards, setSelectedCards] = useState(new Set());
-
+dayjs.extend(localeData);
+dayjs.locale("pl");
+export function VotePage() {
+    const [selectedMonths, setSelectedMonths] = useState({});
+    const [selectedMonth, setSelectedMonth] = useState(dayjs());
     const handleCardClick = (cardIndex) => {
+        const selectedMonthId = selectedMonth.format("YYYY-MM");
+        const selectedCards = selectedMonths[selectedMonthId] || new Set();
+
         if (selectedCards.has(cardIndex)) {
             selectedCards.delete(cardIndex);
         } else {
             selectedCards.add(cardIndex);
         }
-        setSelectedCards(new Set(selectedCards));
+        setSelectedMonth(selectedMonth);
+
+        setSelectedMonths({
+            ...selectedMonths,
+            [selectedMonthId]: selectedCards,
+        });
     };
 
-    const generateDateCards = (monthIndex) => {
-        const month = dayjs().month(monthIndex).date(1)
+    const generateDateCards = (month) => {
+        const startOfMonth = month.startOf("month");
+        const selectedMonthId = month.format("YYYY-MM");
+        const selectedCards = selectedMonths[selectedMonthId] || new Set();
 
         const cards = [];
-        for (let i = 0; i < month.daysInMonth(); i++){
+        for (let i = 0; i < startOfMonth.daysInMonth(); i++){
             let style = {}
             if(i === 0){
-                style = { gridColumnStart: month.isoWeekday() }
+                style = { gridColumnStart: startOfMonth.isoWeekday() }
             }
 
             const isCardSelected = selectedCards.has(i);
             cards.push(
                 <div key={i} style={style} onClick={() => {
-                    if (isCardSelected) {
-                        selectedCards.delete(i);
-                    } else {
-                        selectedCards.add(i);
-                    }
-                    setSelectedCards(new Set(selectedCards));
+                   handleCardClick(i)
                 }}>
                     <DaySmallCard title={`Day ${i + 1}`} selected={isCardSelected}/>
                 </div>
-
             )
         }
         return cards;
     };
+    const decreaseMonth = () => {
+        setSelectedMonth(selectedMonth.subtract(1, "month"));
+    };
 
-    // const { voteName } = useParams();
+    const increaseMonth = () => {
+        setSelectedMonth(selectedMonth.add(1, "month"));
+    };
 
     return (
         <div className={styles.wrap}>
             <Toolbar>
                 <div className={styles.avatarContainer}></div>
             </Toolbar>
-
             <div className={styles.container}>
-                <h2>Czerwiec</h2>
+                <div className={styles.sideButtons}>
+                    <button className={styles.buttonSideStyle} onClick={decreaseMonth}>
+                        <FontAwesomeIcon icon={faArrowLeft} />
+                    </button>
+                </div>
+
+                <div className={styles.monthName}>
+                <h2>{selectedMonth.format("MMMM")}</h2>
+                </div>
+
+                <div className={styles.sideButtons}>
+                    <button className={styles.buttonSideStyle} onClick={increaseMonth}>
+                        <FontAwesomeIcon icon={faArrowRight} />
+                    </button>
+                </div>
+
             </div>
             <div className={styles.namesDays}>
                 <h2 className={styles.nameDayContent}>pon </h2>
@@ -65,7 +95,12 @@ export function VotePage({ children }) {
                 <h2 className={styles.nameDayContent}>sob </h2>
                 <h2 className={styles.nameDayContent}>niedz</h2>
             </div>
-            <div className={styles.cardsContainer}>{generateDateCards(0)}</div>
+            <div className={styles.cardsContainer}>{generateDateCards(selectedMonth)}</div>
+
+            <div className={styles.buttonsContainer}>
+
+            </div>
+
         </div>
     );
 }
