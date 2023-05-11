@@ -1,15 +1,13 @@
 import {BrowserRouter as Router, Route, Routes} from 'react-router-dom';
 import {HomePage} from "./pages/HomePage.jsx";
 import {VotePage} from "./pages/VotePage.jsx";
-import dayjs from 'dayjs';
-import en from 'dayjs/locale/en';
-
-dayjs.locale({
-    ...en,
-    weekStart: 1,
-});
-
 import './App.module.css'
+import isoWeek from 'dayjs/plugin/isoWeek'
+import dayjs from "dayjs";
+
+
+dayjs.extend(isoWeek)
+
 function App() {
     return(
         <Router>

@@ -17,15 +17,16 @@ export function VotePage({ children }) {
         setSelectedCards(new Set(selectedCards));
     };
 
-    const generateDateCards = (voteName) => {
-        const startOfMonth = dayjs().date(1).month(0)
+    const generateDateCards = (monthIndex) => {
+        const month = dayjs().month(monthIndex).date(1)
 
         const cards = [];
-        for (let i = 0; i < startOfMonth.daysInMonth(); i++){
+        for (let i = 0; i < month.daysInMonth(); i++){
             let style = {}
-            if(i == 0){
-                style = {gridColumnStart:startOfMonth.day()}
+            if(i === 0){
+                style = { gridColumnStart: month.isoWeekday() }
             }
+
             const isCardSelected = selectedCards.has(i);
             cards.push(
                 <div key={i} style={style} onClick={() => {
@@ -36,7 +37,7 @@ export function VotePage({ children }) {
                     }
                     setSelectedCards(new Set(selectedCards));
                 }}>
-                    <DaySmallCard title={`Day ${i+1}`} selected={isCardSelected}/>
+                    <DaySmallCard title={`Day ${i + 1}`} selected={isCardSelected}/>
                 </div>
             )
         }
@@ -63,7 +64,7 @@ export function VotePage({ children }) {
                 <h2>sob </h2>
                 <h2>niedz</h2>
             </div>
-            <div className={styles.cardsContainer}>{generateDateCards(voteName)}</div>
+            <div className={styles.cardsContainer}>{generateDateCards(0)}</div>
         </div>
     );
 }
