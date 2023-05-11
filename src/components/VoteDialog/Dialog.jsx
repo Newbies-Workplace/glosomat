@@ -5,6 +5,7 @@ import ReactModal from 'react-modal';
  function Dialog({children, title, isOpen, onDismiss}){
     return (
         <ReactModal
+            ariaHideApp={true}
             isOpen={isOpen}
             onRequestClose={() => onDismiss()}
             contentLabel="Dialog Window"
@@ -12,9 +13,7 @@ import ReactModal from 'react-modal';
         >
             <div className={styles.dialogContainer}>
                 <div className={styles.textnewvote}>{title}</div>
-
                 <div className={styles.whiteSquare}>
-
                     {children}
                 </div>
             </div>

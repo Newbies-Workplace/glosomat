@@ -1,0 +1,41 @@
+
+.dayCardContainer{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    background: #F6CE40;
+    padding: 0px;
+    width: 150px;
+    height: 150px;
+    border-radius: 10px;
+}
+.dayCard{
+    display: flex;
+    background: #FFFFFF;
+    border-radius: 7px;
+    width: 140px;
+    height: 116px;
+}
+
+.dayNumber{
+    font-family: 'Cherry Swash';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 15px;
+    line-height: 27px;
+    /* identical to box height */
+
+    display: flex;
+    align-items: center;
+    text-align: center;
+}
+.dot{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px;
+    width: 20px;
+    height: 20px;
+    background: #BC4545;
+    border-radius: 46px;
+}
